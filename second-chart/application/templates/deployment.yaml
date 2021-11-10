@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: supabase-app
+spec:
+  selector:
+    matchLabels:
+      app: supabase-app
+  template:
+    metadata:
+      labels:
+        app: supabase-app
+    spec:
+      containers:
+        - name: supabase-app
+          image: bohdanpn/supabase-app
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
+          env:          
+          {{- range $key, $val := .Values.env }}
+            - name: {{ $key }}
+              value: {{ $val | quote }}
+          {{- end }}
+      restartPolicy: Always
