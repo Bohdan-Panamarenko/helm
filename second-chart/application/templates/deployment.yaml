@@ -17,9 +17,17 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
-          env:          
-          {{- range $key, $val := .Values.env }}
-            - name: {{ $key }}
-              value: {{ $val | quote }}
-          {{- end }}
+          volumeMounts:
+          - mountPath: /supabase-project/.env.local
+            name: env-local
+            readOnly: true
+            subPath: .env.local
+      volumes:
+      - configMap:
+          defaultMode: 420
+          items:
+          - key: .env
+            path: .env.local
+          name: env-local
+        name: env-local
       restartPolicy: Always

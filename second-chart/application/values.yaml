@@ -81,7 +81,4 @@ ingress:
 
 # affinity: {}
 
-supabase:
-  NEXT_PUBLIC_SUPABASE_URL: https://digithgdhukwunpiejxj.supabase.co
-  NEXT_PUBLIC_SUPABASE_ANON_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYzMDk5ODU5OCwiZXhwIjoxOTQ2NTc0NTk4fQ.rQeTcVZItSpBwvnTxLgYsd_Odp_hG62_45XJXsdaZlY
 

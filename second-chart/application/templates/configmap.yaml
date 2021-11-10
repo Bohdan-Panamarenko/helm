@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: env-local
+data:
+  .env: |-
+    NEXT_PUBLIC_SUPABASE_URL=https://digithgdhukwunpiejxj.supabase.c
+    NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYzMDk5ODU5OCwiZXhwIjoxOTQ2NTc0NTk4fQ.rQeTcVZItSpBwvnTxLgYsd_Odp_hG62_45XJXsdaZlY
